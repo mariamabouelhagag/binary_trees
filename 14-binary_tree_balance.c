@@ -35,8 +35,8 @@ size_t height_for_balanced(const binary_tree_t *tree)
 	{
 		if (tree)
 		{
-			l = tree->left ? 1 + height_for_balanced(tree->left) : 1;
-			r = tree->right ? 1 + height_for_balanced(tree->right) : 1;
+			left = tree->left ? 1 + height_for_balanced(tree->left) : 1;
+			right = tree->right ? 1 + height_for_balanced(tree->right) : 1;
 		}
 		return ((left > right) ? left : right);
 	}
