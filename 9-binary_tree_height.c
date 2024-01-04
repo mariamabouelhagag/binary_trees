@@ -14,17 +14,15 @@ size_t binary_tree_height(const binary_tree_t *tree)
 		return (0);
 	}
 
-	size_t left_high = binary_tree_height(tree->left);
-	size_t right_high = binary_tree_height(tree->right);
-	size_t max_high;
+	size_t left_high = binary_tree_height(tree->left) + 1;
+	size_t right_high = binary_tree_height(tree->right) + 1;
 
 	if (left_high > right_high)
 	{
-		max_high = left_high;
+		return(left_high);
 	}
 	else
 	{
-		max_high = right_high;
+		return (right_high);
 	}
-	return (max_high + 1);
 }
